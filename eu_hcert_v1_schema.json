@@ -5,8 +5,7 @@
     "description": "Vaccination proof accouring to EU EHN, version 1.0",
     "type": "object",
     "required": [
-        "sub",
-        "vac"
+        "sub"
     ],
     "properties": {
         "sub": {
