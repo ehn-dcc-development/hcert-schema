@@ -6,3 +6,6 @@ all: $(PAYLOAD_SCHEMA_JSON)
 	
 $(PAYLOAD_SCHEMA_JSON): $(PAYLOAD_SCHEMA_YAML)
 	python3 schemacheck.py --json $< >$@
+
+clean:
+	rm -f $(PAYLOAD_SCHEMA_JSON)
