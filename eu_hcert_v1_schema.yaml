@@ -3,7 +3,7 @@ $schema: http://json-schema.org/draft/2020-12/schema
 $id: https://github.com/ehn-digital-green-development/hcert-schema/eu_hcert_v1
 
 title: Vaccination proof
-description: Vaccination proof accouring to EU EHN, version 1.0
+description: Vaccination proof or proof of test results according to EU EHN, version 1.0
 
 type: object
 required:
