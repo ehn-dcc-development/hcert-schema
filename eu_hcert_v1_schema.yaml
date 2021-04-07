@@ -22,6 +22,7 @@ properties:
       n:
         title: Legal name
         description: The legal name of the person addressed in the certificate
+        example: Tolvan Tolvansson
       gn:
         title: Given name
         description: The given name(s) of the person addressed in the certificate
