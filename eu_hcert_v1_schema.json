@@ -11,11 +11,24 @@
         "sub": {
             "description": "Subject",
             "type": "object",
-            "required": [
-                "gn",
-                "fn"
+            "anyOf": [
+                {
+                    "required": [
+                        "n"
+                    ]
+                },
+                {
+                    "required": [
+                        "fn",
+                        "gn"
+                    ]
+                }
             ],
             "properties": {
+                "n": {
+                    "title": "Legal name",
+                    "description": "The legal name of the person addressed in the certificate"
+                },
                 "gn": {
                     "title": "Given name",
                     "description": "The given name(s) of the person addressed in the certificate",
