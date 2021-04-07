@@ -24,29 +24,19 @@ properties:
         title: Person identifiers
         description: Identifiers of the vaccinated person, according to
           the policies applicable in each country
-        type: array
-        items:
-          type: object
-          required:
-            - t
-            - i
-          properties:
-            t:
-              title: Identifier type
-              description: The type of identifier
-                pin = personal identity number
-                pas = passport number
-                nid = national identity card number
-              example: pin
-              enum:
-                - pin
-                - pas
-                - nid
-              type: string
-            i:
-              title: Identfier number or string
-              type: string
-              example: 121212-1212
+        properties:
+          pin:
+            title: Person identity number
+            type: string
+            example: 121212-1212
+          pas:
+            title: Passport number
+            type: string
+            example: C01X00T47
+          nid:
+            title: National identity card number
+            type: string
+            example: 121212-1212
       dob:
         title: Date of birth
         description: Mandatory if no Person identifier is provided
