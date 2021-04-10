@@ -3,7 +3,7 @@ $schema: http://json-schema.org/draft/2020-12/schema
 $id: https://github.com/ehn-digital-green-development/hcert-schema/eu_hcert_v1
 
 title: DGC - Digital Green Certificate
-description: Proof of vaccination, test results or recovery according to EU eHN, version 1.0
+description: Proof of vaccination, test results or recovery according to EU eHN, version 1.0; including certificate metadata
 
 type: object
 required:
@@ -205,3 +205,44 @@ properties:
             (ISO 3166 Country Code)
           format: string
           example: SE
+  cert:
+    description: Certificate metadata
+    type: object
+    required: 
+      - is
+      - id
+      - vf
+      - vu
+      - ia
+      - vr
+    properties:
+      is:
+        title: Issuer
+        description: Issuer of the DGC
+        type: string
+        example: Health Ministry of ...
+      id: 
+        title: Identifier
+        description: Identifier of the DGC, called UVID (V for vaccinations), will maybe be renamed to DGCI?
+        type: string
+        example: 01AT42196560275230427402470256520250042 
+      vf: 
+        title: valid from
+        description: Certificate valid from
+        format: date
+        example: "2021-04-04"
+      vu: 
+        title: valid until
+        description: Certificate valid until
+        format: date
+        example: "2021-06-04"
+      ia: 
+        title: Issuing authority country
+        description: Country of the issuing authority
+        type: string
+        example: AT
+      vr: 
+        title: Schema version
+        description: Verion of the schema
+        type: string
+        example: v0.1
