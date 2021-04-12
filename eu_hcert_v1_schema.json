@@ -132,7 +132,7 @@
                     },
                     "dat": {
                         "title": "Date of vaccination",
-                        "description": "The date of the vaccination event (not specified in VS-2021-04-08)",
+                        "description": "The date of the vaccination event",
                         "format": "date",
                         "example": "2021-02-20"
                     },
@@ -176,7 +176,7 @@
                         "title": "Disease",
                         "description": "Disease or agent targeted",
                         "type": "string",
-                        "example": 840539006
+                        "example": "840539006"
                     },
                     "typ": {
                         "title": "Type of test",
@@ -200,11 +200,11 @@
                         "title": "Sample origin",
                         "description": "Origin of sample that was taken (e.g. nasopharyngeal swab, oropharyngeal swab etc.), viz. VS-2021-04-08, optional",
                         "format": "string",
-                        "example": 258500001
+                        "example": "258500001"
                     },
                     "dts": {
                         "title": "Date and time sample",
-                        "description": "Date when the sample for the test was collected",
+                        "description": "Date and time when the sample for the test was collected",
                         "format": "date-time",
                         "example": "2021-02-20T12:34:56+00:00"
                     },
@@ -215,7 +215,7 @@
                         "example": "2021-02-20T14:56:01+00:00"
                     },
                     "res": {
-                        "titel": "Result of test",
+                        "title": "Result of test",
                         "description": "Result of the test according to SNOMED CT (viz. VS-2021-04-08)",
                         "format": "boolean",
                         "example": "1240591000000104 (Severe acute respiratory syndrome coronavirus 2 detected)"
@@ -250,7 +250,7 @@
                         "title": "Disease",
                         "description": "Disease or agent the citizen has recovered from",
                         "type": "string",
-                        "example": 840539006
+                        "example": "840539006"
                     },
                     "dat": {
                         "title": "Date of first positive test result",
@@ -311,7 +311,7 @@
                 },
                 "vr": {
                     "title": "Schema version",
-                    "description": "Verion of the schema (optional, viz. annex)",
+                    "description": "Version of the schema (optional, viz. annex)",
                     "type": "string",
                     "example": "v1.0"
                 }
