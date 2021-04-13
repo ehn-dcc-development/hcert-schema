@@ -13,7 +13,6 @@ properties:
     description: Subject
     type: object
     required:
-      - fn
       - gn
     properties:
       gn:
