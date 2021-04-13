@@ -103,11 +103,13 @@ properties:
           title: Dose sequence number
           description: Number of dose administered in a cycle
           type: integer
+          minimum: 0
           example: 1
         tot:
           title: Total number of doses
           description: Number of expected doses for a complete cycle (specific for a person at the time of administration)
           type: integer
+          minimum: 0
           example: 2
         dat:
           title: Date of vaccination

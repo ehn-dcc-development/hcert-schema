@@ -110,13 +110,15 @@
                         "title": "Dose sequence number",
                         "description": "Number of dose administered in a cycle",
                         "type": "integer",
-                        "example": 1
+                        "example": 1,
+                        "minimuxm": 0
                     },
                     "tot": {
                         "title": "Total number of doses",
                         "description": "Number of expected doses for a complete cycle (specific for a person at the time of administration)",
                         "type": "integer",
-                        "example": 2
+                        "example": 2,
+                        "minimum": 0
                     },
                     "dat": {
                         "title": "Date of vaccination",
