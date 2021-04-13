@@ -15,18 +15,9 @@ properties:
   sub:
     description: Subject
     type: object
-    anyOf:
-      - required:
-        - n
-      - required:
-        - fn
-        - gn
+    required:
+      - gn
     properties:
-      n:
-        title: Legal name
-        description: The legal name of the person addressed in the certificate
-        type: string
-        example: Tolvan Tolvansson
       gn:
         title: Given name
         description: The given name(s) of the person addressed in the certificate
