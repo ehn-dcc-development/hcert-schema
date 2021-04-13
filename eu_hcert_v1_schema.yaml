@@ -25,6 +25,7 @@ properties:
       n:
         title: Legal name
         description: The legal name of the person addressed in the certificate
+        type: string
         example: Tolvan Tolvansson
       gn:
         title: Given name
@@ -64,11 +65,12 @@ properties:
       dob:
         title: Date of birth
         description: Mandatory if no Person identifier is provided
+        type: string
         format: date
       gen:
         title: Administrative gender
         description: Administrative gender (optional, viz. VS-2021-04-08)
-        format: string
+        type: string
         example: male
         
   vac:
@@ -109,28 +111,32 @@ properties:
         seq:
           title: Dose sequence number
           description: Number of dose administered in a cycle
+          type: integer
           example: 1
         tot:
           title: Total number of doses
           description: Number of expected doses for a complete cycle (specific for a person at the time of administration)
+          type: integer
           example: 2
         dat:
           title: Date of vaccination
           description: The date of the vaccination event
+          type: string
           format: date
           example: "2021-02-20"
         cou:
           title: Country
           description: Country (member state) of vaccination (ISO 3166 Country Code) 
-          format: string
+          type: string
           example: SE
         lot:
           title: Batch/lot number
           description: A distinctive combination of numbers and/or letters which specifically identifies a batch, optional
+          type: string
         adm:
           title: Administering centre
           description: Name/code of administering centre or a health authority responsible for the vaccination event, optional
-          format: string
+          type: string
           example: Region Halland
   tst:
     description: Test result statement
@@ -154,48 +160,50 @@ properties:
       typ:
         title: Type of test
         description: Code of the type of test that was conducted (viz. VS-2021-04-08)
-        format: string
+        type: string
         example: LP6464-4
       tna:
         title: Test name
         description: Commercial or brand name of the RT-PCR or rapid antigen test (work in progress in VS-2021-04-08)
-        format: string
+        type: string
         example: tbd
       tma:
         title: Test manufacturer
         description: Manufacturer of the test, optional for NAAT test (work in progress in VS-2021-04-08)
-        format: string
+        type: string
         example: tbd
       ori:
         title: Sample origin
         description: Origin of sample that was taken (e.g. nasopharyngeal swab, oropharyngeal swab etc.), viz. VS-2021-04-08, optional
-        format: string
+        type: string
         example: "258500001"
       dts:
         title: Date and time sample
         description: Date and time when the sample for the test was collected
+        type: string
         format: date-time
         example: "2021-02-20T12:34:56+00:00"
       dtr:
         title: Date and time test result
         description: Date and time when the test result was produced
+        type: string
         format: date-time
         example: "2021-02-20T14:56:01+00:00"
       res:
         title: Result of test
         description: Result of the test according to SNOMED CT (viz. VS-2021-04-08)
-        format: boolean
+        type: string
         example: 1240591000000102 (Severe acute respiratory syndrome coronavirus 2 NOT detected)
         example: 1240591000000104 (Severe acute respiratory syndrome coronavirus 2 detected)
       fac:
         title: Testing centre or facility
         description: Name/code of testing centre, facility or a health authority responsible for the testing event. (not specified in VS-2021-04-08)
-        format: string
+        type: string
         example: tbd
       cou:
         title: Country
         description: Country (member state) of test (ISO 3166 Country Code)
-        format: string
+        type: string
         example: SE
   rec:
     description: Recovery statement
@@ -213,12 +221,13 @@ properties:
       dat:
         title: Date of first positive test result
         description: The date when the sample for the test was collected that led to a positive test result 
+        type: string
         format: date
         example: "2021-02-20"
       cou:
         title: Country of test
         description: Country (member state) in which the first positive test was performed (ISO 3166 Country Code)
-        format: string
+        type: string
         example: SE
   cert:
     description: Certificate metadata
@@ -245,11 +254,13 @@ properties:
       vf: 
         title: valid from
         description: Certificate valid from (optional for vaccination and testing, viz. annex)
+        type: string
         format: date
         example: "2021-04-04"
       vu: 
         title: valid until
         description: Certificate valid until (optional for vaccination and testing, viz. annex)
+        type: string
         format: date
         example: "2021-06-04"
       co: 
