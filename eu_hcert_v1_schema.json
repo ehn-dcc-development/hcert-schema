@@ -11,15 +11,36 @@
         "sub": {
             "description": "Subject",
             "type": "object",
-            "required": [
-                "n"
+            "anyOf": [
+                {
+                    "required": [
+                        "n"
+                    ]
+                },
+                {
+                    "required": [
+                        "fn",
+                        "gn"
+                    ]
+                }
             ],
             "properties": {
                 "n": {
-                    "title": "Person name",
-                    "description": "The legal name of the vaccinated person",
-                    "type": "string",
+                    "title": "Legal name",
+                    "description": "The legal name of the person addressed in the certificate",
                     "example": "Tolvan Tolvansson"
+                },
+                "gn": {
+                    "title": "Given name",
+                    "description": "The given name(s) of the person addressed in the certificate",
+                    "type": "string",
+                    "example": "Tolvan"
+                },
+                "fn": {
+                    "title": "Family name",
+                    "description": "The family name(s) of the person addressed in the certificate",
+                    "type": "string",
+                    "example": "Tolvansson"
                 },
                 "id": {
                     "title": "Person identifiers",

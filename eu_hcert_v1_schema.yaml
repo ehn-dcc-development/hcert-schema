@@ -2,8 +2,8 @@
 $schema: http://json-schema.org/draft/2020-12/schema
 $id: https://github.com/ehn-digital-green-development/hcert-schema/eu_hcert_v1
 
-title: Vaccination proof
-description: Vaccination proof or proof of test results according to EU EHN, version 1.0
+title: DGC - Digital Green Certificate
+description: Proof of vaccination, test results or recovery according to EU eHN, version 1.0
 
 type: object
 required:
@@ -13,13 +13,18 @@ properties:
     description: Subject
     type: object
     required:
-      - n
+      - gn
     properties:
-      n:
-        title: Person name
-        description: The legal name of the vaccinated person
+      gn:
+        title: Given name
+        description: The given name(s) of the person addressed in the certificate
         type: string
-        example: Tolvan Tolvansson
+        example: Tolvan
+      fn:
+        title: Family name
+        description: The family name(s) of the person addressed in the certificate
+        type: string
+        example: Tolvansson
       id:
         title: Person identifiers
         description: Identifiers of the vaccinated person, according to
