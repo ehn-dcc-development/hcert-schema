@@ -40,7 +40,7 @@
                         "properties": {
                             "t": {
                                 "title": "Identifier type",
-                                "description": "The type of identifier (viz. VS-2021-04-08) PPN = Passport NNxxx = national Person Identifier (xxx is ISO 3166 country code) CZ = Citizenship card HC = Health Card number etc.",
+                                "description": "The type of identifier (viz. VS-2021-04-08) PPN = Passport NNxxx = national Person Identifier (ISO 3166-1 alpha-3 country code) CZ = Citizenship card HC = Health Card number etc.",
                                 "example": "PPN",
                                 "type": "string"
                             },
@@ -129,7 +129,7 @@
                     },
                     "cou": {
                         "title": "Country",
-                        "description": "Country (member state) of vaccination (ISO 3166 Country Code)",
+                        "description": "Country (member state) of vaccination (ISO 3166-1 alpha-2 Country Code)",
                         "type": "string",
                         "example": "SE"
                     },
@@ -220,7 +220,7 @@
                 },
                 "cou": {
                     "title": "Country",
-                    "description": "Country (member state) of test (ISO 3166 Country Code)",
+                    "description": "Country (member state) of test (ISO 3166-1 alpha-2 Country Code)",
                     "type": "string",
                     "example": "SE"
                 }
@@ -250,7 +250,7 @@
                 },
                 "cou": {
                     "title": "Country of test",
-                    "description": "Country (member state) in which the first positive test was performed (ISO 3166 Country Code)",
+                    "description": "Country (member state) in which the first positive test was performed (ISO 3166-1 alpha-2 Country Code)",
                     "type": "string",
                     "example": "SE"
                 }
