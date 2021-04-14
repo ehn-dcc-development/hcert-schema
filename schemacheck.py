@@ -68,7 +68,7 @@ def main():
             raise Exception("Unknown schema format")
 
     schema = filter_schema(schema, args.version)
-    jsonschema.Draft4Validator.check_schema(schema)
+    jsonschema.Draft7Validator.check_schema(schema)
 
     if args.json:
         print(json.dumps(schema, indent=4))
