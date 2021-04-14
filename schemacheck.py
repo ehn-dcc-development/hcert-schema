@@ -2,10 +2,43 @@
 
 import argparse
 import json
+import logging
 import sys
 
 import jsonschema
 import yaml
+
+SCHEMA_VERSIONS = ["2020-12", "draft-07"]
+
+SCHEMATA = {
+    "2020-12": "http://json-schema.org/draft/2020-12/schema#",
+    "draft-07": "http://json-schema.org/draft-07/schema#",
+}
+
+SCHEMA_VERSIONS = list(SCHEMATA.keys())
+
+DRAFT_07_KEYS = [
+    "example",
+    "minimum",
+    "maximum",
+]
+
+
+def filter_schema(node, version: str):
+    if isinstance(node, dict):
+        res = node.copy()
+        for k, v in node.items():
+            if version == "draft-07":
+                if k == "$schema":
+                    res[k] = "http://json-schema.org/draft-07/schema#"
+                elif k in DRAFT_07_KEYS:
+                    del res[k]
+                else:
+                    res[k] = filter_schema(v, version)
+            else:
+                res[k] = filter_schema(v, version)
+        return res
+    return node
 
 
 def main():
@@ -15,6 +48,12 @@ def main():
     parser.add_argument("schema", metavar="filename")
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--input", metavar="filename")
+    parser.add_argument(
+        "--version",
+        metavar="version",
+        default=SCHEMA_VERSIONS[0],
+        choices=SCHEMA_VERSIONS,
+    )
     args = parser.parse_args()
 
     filename = args.schema
@@ -28,6 +67,7 @@ def main():
         else:
             raise Exception("Unknown schema format")
 
+    schema = filter_schema(schema, args.version)
     jsonschema.Draft4Validator.check_schema(schema)
 
     if args.json:

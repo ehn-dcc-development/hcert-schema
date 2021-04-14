@@ -1,8 +1,11 @@
-PAYLOAD_SCHEMA_YAML=	eu_hcert_v1_schema.yaml
-PAYLOAD_SCHEMA_JSON=	eu_hcert_v1_schema.json
+PAYLOAD_SCHEMA_YAML=		eu_hcert_v1_schema.yaml
+PAYLOAD_SCHEMA_JSON=		eu_hcert_v1_schema.json
+PAYLOAD_SCHEMA_JSON_DRAFT_07=	eu_hcert_v1_schema_draft_07.json
+
+GENERATED=	$(PAYLOAD_SCHEMA_JSON) $(PAYLOAD_SCHEMA_JSON_DRAFT_07)
 
 
-all: $(PAYLOAD_SCHEMA_JSON)
+all: $(GENERATED)
 
 test: $(PAYLOAD_SCHEMA_YAML)
 	python3 schemacheck.py $<
@@ -10,5 +13,8 @@ test: $(PAYLOAD_SCHEMA_YAML)
 $(PAYLOAD_SCHEMA_JSON): $(PAYLOAD_SCHEMA_YAML)
 	python3 schemacheck.py --json $< >$@
 
+$(PAYLOAD_SCHEMA_JSON_DRAFT_07): $(PAYLOAD_SCHEMA_YAML)
+	python3 schemacheck.py --json --version draft-07 $< >$@
+
 clean:
-	rm -f $(PAYLOAD_SCHEMA_JSON)
+	rm -f $(GENERATED)
