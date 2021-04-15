@@ -48,6 +48,11 @@ properties:
                 CZ = Citizenship card
                 HC = Health Card number
               type: string
+              enum:
+                - PPN
+                - NN
+                - CZ
+                - HC
               example: NN
             c:
               title: Country
