@@ -37,18 +37,23 @@ properties:
           type: object
           required:
             - t
+            - c
             - i
           properties:
             t:
               title: Identifier type
               description: The type of identifier (viz. VS-2021-04-08)
                 PPN = Passport
-                NNxxx = national Person Identifier (ISO 3166-1 alpha-3 country code)
+                NN = National Person Identifier
                 CZ = Citizenship card
                 HC = Health Card number
-                etc.
-              example: PPN
               type: string
+              example: NN
+            c:
+              title: Country
+              description: Issuing country (ISO 3166-1 alpha-2 country code)
+              type: string
+              example: SE
             i:
               title: Identfier number or string
               type: string
