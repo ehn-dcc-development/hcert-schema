@@ -175,15 +175,13 @@
                     },
                     "dts": {
                         "title": "Date and time sample",
-                        "description": "Date and time when the sample for the test was collected",
-                        "type": "string",
-                        "format": "date-time"
+                        "description": "Date and time when the sample for the test was collected (seconds since epoch)",
+                        "type": "integer"
                     },
                     "dtr": {
                         "title": "Date and time test result",
-                        "description": "Date and time when the test result was produced",
-                        "type": "string",
-                        "format": "date-time"
+                        "description": "Date and time when the test result was produced (seconds since epoch)",
+                        "type": "integer"
                     },
                     "res": {
                         "title": "Result of test",
