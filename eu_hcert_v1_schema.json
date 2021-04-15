@@ -56,7 +56,8 @@
                     "title": "Date of birth",
                     "description": "Mandatory if no Person identifier is provided",
                     "type": "string",
-                    "format": "date"
+                    "format": "date",
+                    "example": "2012-12-12"
                 },
                 "gen": {
                     "title": "Administrative gender",
@@ -84,27 +85,27 @@
                 "properties": {
                     "dis": {
                         "title": "Disease",
-                        "description": "Disease or agent targeted",
+                        "description": "Disease or agent targeted (viz. VS-2021-04-08)",
                         "type": "string",
-                        "example": "840539006 (viz. VS-2021-04-08)"
+                        "example": "840539006"
                     },
                     "vap": {
                         "title": "Vaccine/prophylaxis",
-                        "description": "Generic description of the vaccine/prophylaxis or its component(s).",
+                        "description": "Generic description of the vaccine/prophylaxis or its component(s), (viz. VS-2021-04-08)",
                         "type": "string",
-                        "example": "1119305005 (viz. VS-2021-04-08)"
+                        "example": "1119305005"
                     },
                     "mep": {
                         "title": "Vaccine medicinal product",
-                        "description": "Code of the medicinal product",
+                        "description": "Code of the medicinal product (viz. VS-2021-04-08)",
                         "type": "string",
-                        "example": "EU/1/20/1528 (viz. VS-2021-04-08)"
+                        "example": "EU/1/20/1528"
                     },
                     "aut": {
                         "title": "Vaccine marketing authorization holder or Vaccine manufacturer",
-                        "description": "Code as defined in EMA SPOR - Organisations Management System",
+                        "description": "Code as defined in EMA SPOR - Organisations Management System (viz. VS-2021-04-08)",
                         "type": "string",
-                        "example": "ORG-100030215 (viz. VS-2021-04-08)"
+                        "example": "ORG-100030215"
                     },
                     "seq": {
                         "title": "Dose sequence number",
@@ -212,7 +213,7 @@
                         "title": "Result of test",
                         "description": "Result of the test according to SNOMED CT (viz. VS-2021-04-08)",
                         "type": "string",
-                        "example": "1240591000000104 (Severe acute respiratory syndrome coronavirus 2 detected)"
+                        "example": "1240591000000104"
                     },
                     "fac": {
                         "title": "Testing centre or facility",
@@ -285,7 +286,7 @@
                     "title": "Identifier",
                     "description": "Identifier of the DGC, called UVID (V for vaccinations), will maybe be renamed to DGCI?",
                     "type": "string",
-                    "example": "01AT42196560275230427402470256520250042"
+                    "example": "01AT42196560275230427402470256520250042 "
                 },
                 "vf": {
                     "title": "valid from",

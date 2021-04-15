@@ -79,22 +79,22 @@
                 "properties": {
                     "dis": {
                         "title": "Disease",
-                        "description": "Disease or agent targeted",
+                        "description": "Disease or agent targeted (viz. VS-2021-04-08)",
                         "type": "string"
                     },
                     "vap": {
                         "title": "Vaccine/prophylaxis",
-                        "description": "Generic description of the vaccine/prophylaxis or its component(s).",
+                        "description": "Generic description of the vaccine/prophylaxis or its component(s), (viz. VS-2021-04-08)",
                         "type": "string"
                     },
                     "mep": {
                         "title": "Vaccine medicinal product",
-                        "description": "Code of the medicinal product",
+                        "description": "Code of the medicinal product (viz. VS-2021-04-08)",
                         "type": "string"
                     },
                     "aut": {
                         "title": "Vaccine marketing authorization holder or Vaccine manufacturer",
-                        "description": "Code as defined in EMA SPOR - Organisations Management System",
+                        "description": "Code as defined in EMA SPOR - Organisations Management System (viz. VS-2021-04-08)",
                         "type": "string"
                     },
                     "seq": {
