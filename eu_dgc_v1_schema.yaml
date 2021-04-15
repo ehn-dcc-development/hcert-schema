@@ -37,7 +37,6 @@ properties:
           type: object
           required:
             - t
-            - c
             - i
           properties:
             t:
