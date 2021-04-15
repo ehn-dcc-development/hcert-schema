@@ -1,6 +1,6 @@
-PAYLOAD_SCHEMA_YAML=		eu_hcert_v1_schema.yaml
-PAYLOAD_SCHEMA_JSON=		eu_hcert_v1_schema.json
-PAYLOAD_SCHEMA_JSON_DRAFT_07=	eu_hcert_v1_schema_draft_07.json
+PAYLOAD_SCHEMA_YAML=		eu_dgc_v1_schema.yaml
+PAYLOAD_SCHEMA_JSON=		eu_dgc_v1_schema.json
+PAYLOAD_SCHEMA_JSON_DRAFT_07=	eu_dgc_v1_schema_draft_07.json
 
 GENERATED=	$(PAYLOAD_SCHEMA_JSON) $(PAYLOAD_SCHEMA_JSON_DRAFT_07)
 

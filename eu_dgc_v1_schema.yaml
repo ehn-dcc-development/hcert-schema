@@ -1,6 +1,6 @@
 ---
 $schema: http://json-schema.org/draft/2020-12/schema#
-$id: https://github.com/ehn-digital-green-development/hcert-schema/eu_hcert_v1
+$id: https://github.com/ehn-digital-green-development/hcert-schema/eu_dgc_v1
 
 title: Digital Green Certificate
 description: Proof of vaccination, test results or recovery according to EU eHN, version 1.0, including certificate metadata;
