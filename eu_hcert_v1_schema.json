@@ -150,110 +150,116 @@
         },
         "tst": {
             "description": "Test result statement",
-            "type": "object",
-            "required": [
-                "dis",
-                "typ",
-                "tna",
-                "tma",
-                "dts",
-                "dtr",
-                "res",
-                "fac",
-                "cou"
-            ],
-            "properties": {
-                "dis": {
-                    "title": "Disease",
-                    "description": "Disease or agent targeted",
-                    "type": "string",
-                    "example": "840539006"
-                },
-                "typ": {
-                    "title": "Type of test",
-                    "description": "Code of the type of test that was conducted (viz. VS-2021-04-08)",
-                    "type": "string",
-                    "example": "LP6464-4"
-                },
-                "tna": {
-                    "title": "Test name",
-                    "description": "Commercial or brand name of the RT-PCR or rapid antigen test (work in progress in VS-2021-04-08)",
-                    "type": "string",
-                    "example": "tbd"
-                },
-                "tma": {
-                    "title": "Test manufacturer",
-                    "description": "Manufacturer of the test, optional for NAAT test (work in progress in VS-2021-04-08)",
-                    "type": "string",
-                    "example": "tbd"
-                },
-                "ori": {
-                    "title": "Sample origin",
-                    "description": "Origin of sample that was taken (e.g. nasopharyngeal swab, oropharyngeal swab etc.), viz. VS-2021-04-08, optional",
-                    "type": "string",
-                    "example": "258500001"
-                },
-                "dts": {
-                    "title": "Date and time sample",
-                    "description": "Date and time when the sample for the test was collected",
-                    "type": "string",
-                    "format": "date-time",
-                    "example": "2021-02-20T12:34:56+00:00"
-                },
-                "dtr": {
-                    "title": "Date and time test result",
-                    "description": "Date and time when the test result was produced",
-                    "type": "string",
-                    "format": "date-time",
-                    "example": "2021-02-20T14:56:01+00:00"
-                },
-                "res": {
-                    "title": "Result of test",
-                    "description": "Result of the test according to SNOMED CT (viz. VS-2021-04-08)",
-                    "type": "string",
-                    "example": "1240591000000104"
-                },
-                "fac": {
-                    "title": "Testing centre or facility",
-                    "description": "Name/code of testing centre, facility or a health authority responsible for the testing event. (not specified in VS-2021-04-08)",
-                    "type": "string",
-                    "example": "tbd"
-                },
-                "cou": {
-                    "title": "Country",
-                    "description": "Country (member state) of test (ISO 3166-1 alpha-2 Country Code)",
-                    "type": "string",
-                    "example": "SE"
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "dis",
+                    "typ",
+                    "tna",
+                    "tma",
+                    "dts",
+                    "dtr",
+                    "res",
+                    "fac",
+                    "cou"
+                ],
+                "properties": {
+                    "dis": {
+                        "title": "Disease",
+                        "description": "Disease or agent targeted",
+                        "type": "string",
+                        "example": "840539006"
+                    },
+                    "typ": {
+                        "title": "Type of test",
+                        "description": "Code of the type of test that was conducted (viz. VS-2021-04-08)",
+                        "type": "string",
+                        "example": "LP6464-4"
+                    },
+                    "tna": {
+                        "title": "Test name",
+                        "description": "Commercial or brand name of the RT-PCR or rapid antigen test (work in progress in VS-2021-04-08)",
+                        "type": "string",
+                        "example": "tbd"
+                    },
+                    "tma": {
+                        "title": "Test manufacturer",
+                        "description": "Manufacturer of the test, optional for NAAT test (work in progress in VS-2021-04-08)",
+                        "type": "string",
+                        "example": "tbd"
+                    },
+                    "ori": {
+                        "title": "Sample origin",
+                        "description": "Origin of sample that was taken (e.g. nasopharyngeal swab, oropharyngeal swab etc.), viz. VS-2021-04-08, optional",
+                        "type": "string",
+                        "example": "258500001"
+                    },
+                    "dts": {
+                        "title": "Date and time sample",
+                        "description": "Date and time when the sample for the test was collected",
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2021-02-20T12:34:56+00:00"
+                    },
+                    "dtr": {
+                        "title": "Date and time test result",
+                        "description": "Date and time when the test result was produced",
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2021-02-20T14:56:01+00:00"
+                    },
+                    "res": {
+                        "title": "Result of test",
+                        "description": "Result of the test according to SNOMED CT (viz. VS-2021-04-08)",
+                        "type": "string",
+                        "example": "1240591000000104"
+                    },
+                    "fac": {
+                        "title": "Testing centre or facility",
+                        "description": "Name/code of testing centre, facility or a health authority responsible for the testing event. (not specified in VS-2021-04-08)",
+                        "type": "string",
+                        "example": "tbd"
+                    },
+                    "cou": {
+                        "title": "Country",
+                        "description": "Country (member state) of test (ISO 3166-1 alpha-2 Country Code)",
+                        "type": "string",
+                        "example": "SE"
+                    }
                 }
             }
         },
         "rec": {
             "description": "Recovery statement",
-            "type": "object",
-            "required": [
-                "dis",
-                "dat",
-                "cou"
-            ],
-            "properties": {
-                "dis": {
-                    "title": "Disease",
-                    "description": "Disease or agent the citizen has recovered from",
-                    "type": "string",
-                    "example": "840539006"
-                },
-                "dat": {
-                    "title": "Date of first positive test result",
-                    "description": "The date when the sample for the test was collected that led to a positive test result",
-                    "type": "string",
-                    "format": "date",
-                    "example": "2021-02-20"
-                },
-                "cou": {
-                    "title": "Country of test",
-                    "description": "Country (member state) in which the first positive test was performed (ISO 3166-1 alpha-2 Country Code)",
-                    "type": "string",
-                    "example": "SE"
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "dis",
+                    "dat",
+                    "cou"
+                ],
+                "properties": {
+                    "dis": {
+                        "title": "Disease",
+                        "description": "Disease or agent the citizen has recovered from",
+                        "type": "string",
+                        "example": "840539006"
+                    },
+                    "dat": {
+                        "title": "Date of first positive test result",
+                        "description": "The date when the sample for the test was collected that led to a positive test result",
+                        "type": "string",
+                        "format": "date",
+                        "example": "2021-02-20"
+                    },
+                    "cou": {
+                        "title": "Country of test",
+                        "description": "Country (member state) in which the first positive test was performed (ISO 3166-1 alpha-2 Country Code)",
+                        "type": "string",
+                        "example": "SE"
+                    }
                 }
             }
         },
