@@ -175,16 +175,16 @@ properties:
           example: "258500001"
         dts:
           title: Date and time sample
-          description: Date and time when the sample for the test was collected
-          type: string
-          format: date-time
-          example: "2021-02-20T12:34:56+00:00"
+          description: Date and time when the sample for the test was collected (seconds since epoch)
+          type: integer
+          minimum: 0
+          example: 441759600
         dtr:
           title: Date and time test result
-          description: Date and time when the test result was produced
-          type: string
-          format: date-time
-          example: "2021-02-20T14:56:01+00:00"
+          description: Date and time when the test result was produced (seconds since epoch)
+          type: integer
+          minimum: 0
+          example: 441759600
         res:
           title: Result of test
           description: Result of the test according to SNOMED CT (viz. VS-2021-04-08)
