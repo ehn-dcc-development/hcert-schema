@@ -44,14 +44,20 @@ properties:
               description: The type of identifier (viz. VS-2021-04-08)
                 PPN = Passport
                 NN = National Person Identifier
-                CZ = Citizenship card
+                CZ = Citizenship Card
                 HC = Health Card number
+                NI = National Unique Individual Identifier
+                MB = Member number
+                NH = National Helth Plan identifier
               type: string
               enum:
                 - PPN
                 - NN
                 - CZ
                 - HC
+                - NI
+                - MB
+                - NH
               example: NN
             c:
               title: Country
