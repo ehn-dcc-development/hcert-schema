@@ -15,5 +15,6 @@ Concise Binary Object Representation (CBOR), specified in [RFC7049](https://tool
 - Strings are encoded as CBOR major type 3. a text string.
 - Arrays are encoded as CBOR major type 4, an array of data items.
 - Objects are encoded as CBOR major type 5, a map of pairs of data items.
+- Timestamps (seconds since epoch) are encoded as CBOR major type 0, an unsigned integer, _without_ any tag.
 
 Parties validating payloads are strongly advised to follow the robustness principle and be liberal in what you accept from others.
