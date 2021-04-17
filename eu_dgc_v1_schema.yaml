@@ -102,7 +102,7 @@ properties:
           title: Disease
           description: Disease or agent targeted (viz. VS-2021-04-14)
           type: string
-          example: "840539006" (which stands for COVID-19)
+          example: "840539006"
         vap:
           title: Vaccine/prophylaxis
           description: Generic description of the vaccine/prophylaxis or its component(s), (viz. VS-2021-04-14)
