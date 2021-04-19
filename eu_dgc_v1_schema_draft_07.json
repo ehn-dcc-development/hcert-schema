@@ -95,7 +95,13 @@
                 "gen": {
                     "title": "Administrative gender",
                     "description": "Administrative gender (optional, viz. VS-2021-04-14)",
-                    "type": "string"
+                    "type": "string",
+                    "enum": [
+                        "male",
+                        "female",
+                        "other",
+                        "unknown"
+                    ]
                 }
             }
         },
