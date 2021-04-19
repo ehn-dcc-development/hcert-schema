@@ -31,14 +31,14 @@ properties:
       gnt:
         title: Given name (transliterated)
         description: The given name(s) of the person addressed in the certificate
-          transliterated into the OCR-B Characters from ISO 1073-2 accodring to
+          transliterated into the OCR-B Characters from ISO 1073-2 according to
           the ICAO Doc 9303 part 3.
         type: string
         example: Toelvan
       fnt:
         title: Family name (transliterated)
         description: The family name(s) of the person addressed in the certificate
-          transliterated into the OCR-B Characters from ISO 1073-2 accodring to
+          transliterated into the OCR-B Characters from ISO 1073-2 according to
           the ICAO Doc 9303 part 3.
         type: string
         example: Toelvansson
