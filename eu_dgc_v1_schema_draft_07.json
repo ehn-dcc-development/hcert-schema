@@ -7,7 +7,6 @@
     "required": [
         "v",
         "dgcid",
-        "is",
         "sub"
     ],
     "properties": {
@@ -21,16 +20,12 @@
             "description": "Unique identifier of the DGC (initially called UVCI (V for vaccination), later renamed to DGCI), format and composizion viz. guidelines",
             "type": "string"
         },
-        "is": {
-            "title": "Issuer",
-            "description": "Issuer of the DGC",
-            "type": "string"
-        },
         "sub": {
             "description": "Subject",
             "type": "object",
             "required": [
-                "gn"
+                "gn",
+                "gna"
             ],
             "properties": {
                 "gn": {
@@ -41,6 +36,16 @@
                 "fn": {
                     "title": "Family name",
                     "description": "The family name(s) of the person addressed in the certificate",
+                    "type": "string"
+                },
+                "gna": {
+                    "title": "Given name",
+                    "description": "The given name(s) of the person addressed in the certificate (in ASCII following ICAO Document 9303 part 3)",
+                    "type": "string"
+                },
+                "fna": {
+                    "title": "Family name",
+                    "description": "The family name(s) of the person addressed in the certificate (in ASCII following ICAO Document 9303 part 3)",
                     "type": "string"
                 },
                 "id": {

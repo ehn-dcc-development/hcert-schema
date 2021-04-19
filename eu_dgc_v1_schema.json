@@ -7,7 +7,6 @@
     "required": [
         "v",
         "dgcid",
-        "is",
         "sub"
     ],
     "properties": {
@@ -23,30 +22,37 @@
             "type": "string",
             "example": "01AT42196560275230427402470256520250042"
         },
-        "is": {
-            "title": "Issuer",
-            "description": "Issuer of the DGC",
-            "type": "string",
-            "example": "Health Ministry of ..."
-        },
         "sub": {
             "description": "Subject",
             "type": "object",
             "required": [
-                "gn"
+                "gn",
+                "gna"
             ],
             "properties": {
                 "gn": {
                     "title": "Given name",
                     "description": "The given name(s) of the person addressed in the certificate",
                     "type": "string",
-                    "example": "Tolvan"
+                    "example": "G\u00c3\u00bcnther"
                 },
                 "fn": {
                     "title": "Family name",
                     "description": "The family name(s) of the person addressed in the certificate",
                     "type": "string",
-                    "example": "Tolvansson"
+                    "example": "Mustermann-R\u00c3\u00b6\u00c3\u0178ler"
+                },
+                "gna": {
+                    "title": "Given name",
+                    "description": "The given name(s) of the person addressed in the certificate (in ASCII following ICAO Document 9303 part 3)",
+                    "type": "string",
+                    "example": "Guenther"
+                },
+                "fna": {
+                    "title": "Family name",
+                    "description": "The family name(s) of the person addressed in the certificate (in ASCII following ICAO Document 9303 part 3)",
+                    "type": "string",
+                    "example": "Mustermann-Roessler"
                 },
                 "id": {
                     "title": "Person identifiers",
