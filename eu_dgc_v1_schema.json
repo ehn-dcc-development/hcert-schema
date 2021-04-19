@@ -27,7 +27,8 @@
             "type": "object",
             "required": [
                 "gn",
-                "gna"
+                "dob",
+                "gen"
             ],
             "properties": {
                 "gn": {
