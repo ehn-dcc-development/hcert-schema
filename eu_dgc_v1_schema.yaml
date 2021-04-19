@@ -29,7 +29,8 @@ properties:
     type: object
     required:
       - gn
-      - gnt
+      - dob
+      - gen
     properties:
       gn:
         title: Given name
