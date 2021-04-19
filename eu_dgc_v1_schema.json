@@ -34,25 +34,25 @@
                     "title": "Given name",
                     "description": "The given name(s) of the person addressed in the certificate",
                     "type": "string",
-                    "example": "G\u00c3\u00bcnther"
+                    "example": "T\u00f6lvan"
                 },
                 "fn": {
                     "title": "Family name",
                     "description": "The family name(s) of the person addressed in the certificate",
                     "type": "string",
-                    "example": "Mustermann-R\u00c3\u00b6\u00c3\u0178ler"
+                    "example": "T\u00f6lvansson"
                 },
-                "gna": {
-                    "title": "Given name",
-                    "description": "The given name(s) of the person addressed in the certificate (in ASCII following ICAO Document 9303 part 3)",
+                "gnt": {
+                    "title": "Given name (transliterated)",
+                    "description": "The given name(s) of the person addressed in the certificate transliterated into the OCR-B Characters from ISO 1073-2 according to the ICAO Doc 9303 part 3.",
                     "type": "string",
-                    "example": "Guenther"
+                    "example": "Toelvan"
                 },
-                "fna": {
-                    "title": "Family name",
-                    "description": "The family name(s) of the person addressed in the certificate (in ASCII following ICAO Document 9303 part 3)",
+                "fnt": {
+                    "title": "Family name (transliterated)",
+                    "description": "The family name(s) of the person addressed in the certificate transliterated into the OCR-B Characters from ISO 1073-2 according to the ICAO Doc 9303 part 3.",
                     "type": "string",
-                    "example": "Mustermann-Roessler"
+                    "example": "Toelvansson"
                 },
                 "id": {
                     "title": "Person identifiers",
@@ -67,9 +67,24 @@
                         "properties": {
                             "t": {
                                 "title": "Identifier type",
-                                "description": "The type of identifier (viz. VS-2021-04-14) PPN = Passport NNxxx = national Person Identifier (ISO 3166-1 alpha-3 country code) CZ = Citizenship card HC = Health Card number etc.",
-                                "example": "PPN",
-                                "type": "string"
+                                "description": "The type of identifier (viz. VS-2021-04-08) PP = Passport Number NN = National Person Identifier CZ = Citizenship Card Number HC = Health Card number NI = National Unique Individual Identifier MB = Member Number NH = National Helth Plan Identifier",
+                                "type": "string",
+                                "enum": [
+                                    "PPN",
+                                    "NN",
+                                    "CZ",
+                                    "HC",
+                                    "NI",
+                                    "MB",
+                                    "NH"
+                                ],
+                                "example": "NN"
+                            },
+                            "c": {
+                                "title": "Country",
+                                "description": "Issuing country (ISO 3166-1 alpha-2 country code) of identifier",
+                                "type": "string",
+                                "example": "SE"
                             },
                             "i": {
                                 "title": "Identfier number or string",

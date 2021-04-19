@@ -38,14 +38,14 @@
                     "description": "The family name(s) of the person addressed in the certificate",
                     "type": "string"
                 },
-                "gna": {
-                    "title": "Given name",
-                    "description": "The given name(s) of the person addressed in the certificate (in ASCII following ICAO Document 9303 part 3)",
+                "gnt": {
+                    "title": "Given name (transliterated)",
+                    "description": "The given name(s) of the person addressed in the certificate transliterated into the OCR-B Characters from ISO 1073-2 according to the ICAO Doc 9303 part 3.",
                     "type": "string"
                 },
-                "fna": {
-                    "title": "Family name",
-                    "description": "The family name(s) of the person addressed in the certificate (in ASCII following ICAO Document 9303 part 3)",
+                "fnt": {
+                    "title": "Family name (transliterated)",
+                    "description": "The family name(s) of the person addressed in the certificate transliterated into the OCR-B Characters from ISO 1073-2 according to the ICAO Doc 9303 part 3.",
                     "type": "string"
                 },
                 "id": {
@@ -61,7 +61,21 @@
                         "properties": {
                             "t": {
                                 "title": "Identifier type",
-                                "description": "The type of identifier (viz. VS-2021-04-14) PPN = Passport NNxxx = national Person Identifier (ISO 3166-1 alpha-3 country code) CZ = Citizenship card HC = Health Card number etc.",
+                                "description": "The type of identifier (viz. VS-2021-04-08) PP = Passport Number NN = National Person Identifier CZ = Citizenship Card Number HC = Health Card number NI = National Unique Individual Identifier MB = Member Number NH = National Helth Plan Identifier",
+                                "type": "string",
+                                "enum": [
+                                    "PPN",
+                                    "NN",
+                                    "CZ",
+                                    "HC",
+                                    "NI",
+                                    "MB",
+                                    "NH"
+                                ]
+                            },
+                            "c": {
+                                "title": "Country",
+                                "description": "Issuing country (ISO 3166-1 alpha-2 country code) of identifier",
                                 "type": "string"
                             },
                             "i": {
