@@ -29,7 +29,7 @@ properties:
     type: object
     required:
       - gn
-      - gna
+      - gnt
     properties:
       gn:
         title: Given name
