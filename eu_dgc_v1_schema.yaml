@@ -30,7 +30,6 @@ properties:
     required:
       - gn
       - dob
-      - gen
     properties:
       gn:
         title: Given name
