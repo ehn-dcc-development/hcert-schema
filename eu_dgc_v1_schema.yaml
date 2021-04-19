@@ -42,13 +42,28 @@ properties:
             t:
               title: Identifier type
               description: The type of identifier (viz. VS-2021-04-08)
-                PPN = Passport
-                NNxxx = national Person Identifier (ISO 3166-1 alpha-3 country code)
-                CZ = Citizenship card
+                PP = Passport Number
+                NN = National Person Identifier
+                CZ = Citizenship Card Number
                 HC = Health Card number
-                etc.
-              example: PPN
+                NI = National Unique Individual Identifier
+                MB = Member Number
+                NH = National Helth Plan Identifier
               type: string
+              enum:
+                - PPN
+                - NN
+                - CZ
+                - HC
+                - NI
+                - MB
+                - NH
+              example: NN
+            c:
+              title: Country
+              description: Issuing country (ISO 3166-1 alpha-2 country code) of identifier
+              type: string
+              example: SE
             i:
               title: Identfier number or string
               type: string
