@@ -65,7 +65,7 @@
                                 "description": "The type of identifier (viz. VS-2021-04-08) PP = Passport Number NN = National Person Identifier CZ = Citizenship Card Number HC = Health Card number NI = National Unique Individual Identifier MB = Member Number NH = National Helth Plan Identifier",
                                 "type": "string",
                                 "enum": [
-                                    "PPN",
+                                    "PP",
                                     "NN",
                                     "CZ",
                                     "HC",

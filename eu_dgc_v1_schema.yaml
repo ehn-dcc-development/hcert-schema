@@ -79,7 +79,7 @@ properties:
                 NH = National Helth Plan Identifier
               type: string
               enum:
-                - PPN
+                - PP
                 - NN
                 - CZ
                 - HC
