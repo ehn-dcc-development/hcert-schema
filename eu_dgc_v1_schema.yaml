@@ -22,12 +22,26 @@ properties:
         title: Given name
         description: The given name(s) of the person addressed in the certificate
         type: string
-        example: Tolvan
+        example: Tölvan
       fn:
         title: Family name
         description: The family name(s) of the person addressed in the certificate
         type: string
-        example: Tolvansson
+        example: Tölvansson
+      gnt:
+        title: Given name (transliterated)
+        description: The given name(s) of the person addressed in the certificate
+          transliterated into the OCR-B Characters from ISO 1073-2 accodring to
+          the ICAO Doc 9303 part 3.
+        type: string
+        example: Toelvan
+      fnt:
+        title: Family name (transliterated)
+        description: The family name(s) of the person addressed in the certificate
+          transliterated into the OCR-B Characters from ISO 1073-2 accodring to
+          the ICAO Doc 9303 part 3.
+        type: string
+        example: Toelvansson
       id:
         title: Person identifiers
         description: Identifiers of the vaccinated person, according to
