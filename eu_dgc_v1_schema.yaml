@@ -47,14 +47,14 @@ properties:
           transliterated into the OCR-B Characters from ISO 1073-2 according to
           the ICAO Doc 9303 part 3.
         type: string
-        example: Toelvan
+        example: TOELVAN
       fnt:
         title: Family name (transliterated)
         description: The family name(s) of the person addressed in the certificate
           transliterated into the OCR-B Characters from ISO 1073-2 according to
           the ICAO Doc 9303 part 3.
         type: string
-        example: Toelvansson
+        example: TOELVANSSON
       id:
         title: Person identifiers
         description: Identifiers of the vaccinated person, according to
