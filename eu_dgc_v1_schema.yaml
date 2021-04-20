@@ -27,6 +27,7 @@ properties:
   sub:
     description: Subject
     type: object
+    additionalProperties: False
     required:
       - gn
       - dob
@@ -102,6 +103,7 @@ properties:
     type: array
     items:
       type: object
+      additionalProperties: False
       required:
         - dis
         - vap
@@ -169,6 +171,7 @@ properties:
     type: array
     items:
       type: object
+      additionalProperties: False
       required:
         - dis
         - typ
@@ -233,6 +236,7 @@ properties:
     type: array
     items:
       type: object
+      additionalProperties: False
       required:
         - dis
         - dat
