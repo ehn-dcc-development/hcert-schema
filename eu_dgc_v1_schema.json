@@ -97,7 +97,7 @@
                 },
                 "dob": {
                     "title": "Date of birth",
-                    "description": "The date of birth for of the person addressed in the certificate",
+                    "description": "The date of birth of the person addressed in the certificate",
                     "type": "string",
                     "format": "date",
                     "example": "2012-12-12"
