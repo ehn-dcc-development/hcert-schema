@@ -65,26 +65,21 @@ properties:
           required:
             - t
             - i
+            - c
           properties:
             t:
               title: Identifier type
               description: The type of identifier (viz. VS-2021-04-08)
                 PP = Passport Number
-                NN = National Person Identifier
+                NN = National Person Identifier (country specified in the 'c' parameter)
                 CZ = Citizenship Card Number
-                HC = Health Card number
-                NI = National Unique Individual Identifier
-                MB = Member Number
-                NH = National Helth Plan Identifier
+                HC = Health Card Number
               type: string
               enum:
                 - PP
                 - NN
                 - CZ
                 - HC
-                - NI
-                - MB
-                - NH
               example: NN
             c:
               title: Country
@@ -92,7 +87,7 @@ properties:
               type: string
               example: SE
             i:
-              title: Identfier number or string
+              title: Identifier number or string
               type: string
               example: 121212-1212
       dob:
