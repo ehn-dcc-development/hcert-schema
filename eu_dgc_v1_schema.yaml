@@ -97,7 +97,7 @@ properties:
               example: 121212-1212
       dob:
         title: Date of birth
-        description: Mandatory if no Person identifier is provided
+        description: The date of birth for of the person addressed in the certificate
         type: string
         format: date
         example: "2012-12-12"
