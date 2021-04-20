@@ -19,11 +19,6 @@ properties:
     description: Version of the schema, according to Semantic versioning (ISO, https://semver.org/ version 2.0.0 or newer) (viz. guidelines)
     type: string
     example: "1.0.0"
-  dgcid:
-    title: Identifier
-    description: Unique identifier of the DGC (initially called UVCI (V for vaccination), later renamed to DGCI), format and composizion viz. guidelines
-    type: string
-    example: "01AT42196560275230427402470256520250042"
   sub:
     description: Subject
     type: object
