@@ -23,6 +23,7 @@
         "sub": {
             "description": "Subject",
             "type": "object",
+            "additionalProperties": false,
             "required": [
                 "gn",
                 "dob"
@@ -48,41 +49,6 @@
                     "description": "The family name(s) of the person addressed in the certificate transliterated into the OCR-B Characters from ISO 1073-2 according to the ICAO Doc 9303 part 3.",
                     "type": "string"
                 },
-                "id": {
-                    "title": "Person identifiers",
-                    "description": "Identifiers of the vaccinated person, according to the policies applicable in each country",
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "required": [
-                            "t",
-                            "c",
-                            "i"
-                        ],
-                        "properties": {
-                            "t": {
-                                "title": "Identifier type",
-                                "description": "The type of identifier (viz. VS-2021-04-08) PP = Passport Number NN = National Person Identifier (country specified in the 'c' parameter) CZ = Citizenship Card Number HC = Health Card Number",
-                                "type": "string",
-                                "enum": [
-                                    "PP",
-                                    "NN",
-                                    "CZ",
-                                    "HC"
-                                ]
-                            },
-                            "c": {
-                                "title": "Country",
-                                "description": "Issuing country (ISO 3166-1 alpha-2 country code) of identifier",
-                                "type": "string"
-                            },
-                            "i": {
-                                "title": "Identifier number or string",
-                                "type": "string"
-                            }
-                        }
-                    }
-                },
                 "dob": {
                     "title": "Date of birth",
                     "description": "The date of birth of the person addressed in the certificate",
@@ -96,6 +62,7 @@
             "type": "array",
             "items": {
                 "type": "object",
+                "additionalProperties": false,
                 "required": [
                     "dis",
                     "vap",
@@ -166,6 +133,7 @@
             "type": "array",
             "items": {
                 "type": "object",
+                "additionalProperties": false,
                 "required": [
                     "dis",
                     "typ",
@@ -229,6 +197,7 @@
             "type": "array",
             "items": {
                 "type": "object",
+                "additionalProperties": false,
                 "required": [
                     "dis",
                     "dat",
