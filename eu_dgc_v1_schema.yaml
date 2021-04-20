@@ -102,16 +102,6 @@ properties:
         type: string
         format: date
         example: "2012-12-12"
-      gen:
-        title: Administrative gender
-        description: Administrative gender (optional, viz. VS-2021-04-14)
-        type: string
-        enum:
-          - male
-          - female
-          - other
-          - unknown
-        example: male
 
   vac:
     description: Vaccination/prophylaxis information
