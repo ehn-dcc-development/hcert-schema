@@ -19,6 +19,13 @@ properties:
     description: Version of the schema, according to Semantic versioning (ISO, https://semver.org/ version 2.0.0 or newer) (viz. guidelines)
     type: string
     example: "1.0.0"
+  dgcid:
+    title: Digital Green Certificate Identifier
+    description: Unique identifier of the DGC. The ID must be prefixed with the 
+      country code of the issuing country followed by any number of characters 
+      in the range [0-9A-Z].
+    type: string
+    example: "SEW567YUT54"
   sub:
     description: Subject
     type: object
