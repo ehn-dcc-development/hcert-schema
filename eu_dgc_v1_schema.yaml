@@ -56,41 +56,6 @@ properties:
           the ICAO Doc 9303 part 3.
         type: string
         example: Toelvansson
-      id:
-        title: Person identifiers
-        description: Identifiers of the vaccinated person, according to
-          the policies applicable in each country
-        type: array
-        items:
-          type: object
-          required:
-            - t
-            - c
-            - i
-          properties:
-            t:
-              title: Identifier type
-              description: The type of identifier (viz. VS-2021-04-08)
-                PP = Passport Number
-                NN = National Person Identifier (country specified in the 'c' parameter)
-                CZ = Citizenship Card Number
-                HC = Health Card Number
-              type: string
-              enum:
-                - PP
-                - NN
-                - CZ
-                - HC
-              example: NN
-            c:
-              title: Country
-              description: Issuing country (ISO 3166-1 alpha-2 country code) of identifier
-              type: string
-              example: SE
-            i:
-              title: Identifier number or string
-              type: string
-              example: 121212-1212
       dob:
         title: Date of birth
         description: The date of birth of the person addressed in the certificate
