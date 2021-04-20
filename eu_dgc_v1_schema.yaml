@@ -64,6 +64,7 @@ properties:
           type: object
           required:
             - t
+            - c
             - i
             - c
           properties:
@@ -92,20 +93,10 @@ properties:
               example: 121212-1212
       dob:
         title: Date of birth
-        description: Mandatory if no Person identifier is provided
+        description: The date of birth of the person addressed in the certificate
         type: string
         format: date
         example: "2012-12-12"
-      gen:
-        title: Administrative gender
-        description: Administrative gender (optional, viz. VS-2021-04-14)
-        type: string
-        enum:
-          - male
-          - female
-          - other
-          - unknown
-        example: male
 
   vac:
     description: Vaccination/prophylaxis information
