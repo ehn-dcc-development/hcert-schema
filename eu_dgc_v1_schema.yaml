@@ -25,7 +25,7 @@ properties:
       country code of the issuing country followed by any number of characters 
       in the range [0-9A-Z].
     type: string
-    pattern: "[A-Z]{2}[A-Z0-9]+"
+    pattern: "[A-Z]{2}[A-Z0-9]+$"
     example: "SEW567YUT54"
   sub:
     description: Subject
