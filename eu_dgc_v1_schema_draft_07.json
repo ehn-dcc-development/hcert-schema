@@ -16,9 +16,10 @@
             "type": "string"
         },
         "dgcid": {
-            "title": "Identifier",
-            "description": "Unique identifier of the DGC (initially called UVCI (V for vaccination), later renamed to DGCI), format and composizion viz. guidelines",
-            "type": "string"
+            "title": "Digital Green Certificate Identifier",
+            "description": "Unique identifier of the DGC. The ID must be prefixed with the country code of the issuing country followed by any number of characters in the range [0-9A-Z].",
+            "type": "string",
+            "pattern": "^[A-Z]{2}[A-Z0-9]+$"
         },
         "sub": {
             "description": "Subject",
@@ -87,7 +88,8 @@
                     "title": "Date of birth",
                     "description": "The date of birth of the person addressed in the certificate",
                     "type": "string",
-                    "format": "date"
+                    "format": "date",
+                    "pattern": "^(19|20)\\d{2}-\\d{2}-\\d{2}$"
                 }
             }
         },
